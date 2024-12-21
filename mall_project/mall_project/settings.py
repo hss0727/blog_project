@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'mall_users',
     'mall_products',
     'mall_orders',
+    'blog.apps.BlogConfig',
 ]
 
 MIDDLEWARE = [
