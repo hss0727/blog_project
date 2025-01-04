@@ -10,7 +10,7 @@
 {% block content %}
     {% for post in posts %}
     <h2>
-        <a href="{% url 'blog:post_detail' post.id %}">
+        <a href="{{ post.get_absolute_url }}">
             {{ post.title }}
         </a>
     </h2>
@@ -20,6 +20,7 @@
     </p>
     {{ post.body|truncatewords:30|linebreaks }}
     {% endfor %}
+    {% include "pagenation.html" with page=page_obj %}
 {% endblock %}
 
 
